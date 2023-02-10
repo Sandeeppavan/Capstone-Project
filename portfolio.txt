@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <style>
+      /* Add styles for your website */
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .header {
+        background-color: lightblue;
+        padding: 20px;
+      }
+
+      .header h1 {
+        color: white;
+      }
+
+      .header p {
+        color: white;
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="container">
+        <h1>My Portfolio</h1>
+        <p>Welcome to my online portfolio.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I'm a web developer with a passion for creating beautiful and functional websites.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2>My Projects</h2>
+        <ul>
+          <li>Project 1</li>
+          <li>Project 2</li>
+          <li>Project 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Add JavaScript for interactivity, if desired -->
+    <script>
+      import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/Portfolio")
+public class PortfolioServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<title>My Portfolio</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Welcome to my Portfolio</h1>");
+        out.println("<p>This is a simple portfolio website built using Java and Servlets.</p>");
+        out.println("</body>");
+        out.println("</html>");
+    }
+}
+    </script>
+  </body>
+</html>
